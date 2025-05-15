@@ -147,6 +147,34 @@
 .status-menu-item.completed {
   color: #27ae60; /* verde */
 }
+.status-tip {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.back-to-login-button {
+  /* seu CSS atual */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+
+  position: relative;
+  top: -80px; /* sobe 8px para cima */
+  left: 80; /* centraliza horizontalmente */
+}
+
+.back-to-login-button:hover {
+  background-color: #0056b3;
+}
+
 
 
 

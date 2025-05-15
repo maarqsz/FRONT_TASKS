@@ -65,3 +65,13 @@ export const updateTaskStatus = async (taskId, status) => {
   return api.put(`/task/${taskId}/status`, { status });
 };
 
+export const registerUser = async (name, email, password) => {
+  try {
+    const response = await api.post('/user', { name, email, password });
+    return response.data;
+  } catch (error) {
+    console.error('Registro falhou:', error);
+    throw error;
+  }
+};
+

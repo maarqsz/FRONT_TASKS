@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { getTasks, createTask, deleteTask, updateTaskStatus } from '../services/api';
 import '../styles/Tasks.css';
+
+
 
 const statusOptions = [
   { label: 'PENDING', colorClass: 'pending' },
@@ -9,9 +12,14 @@ const statusOptions = [
 ];
 
 const Tasks = () => {
+  const navigate = useNavigate();
   const [tasks, setTasks] = useState([]);
   const [newTaskTitle, setNewTaskTitle] = useState('');
-  const [openStatusMenuId, setOpenStatusMenuId] = useState(null); // ID da task com menu aberto
+  const [openStatusMenuId, setOpenStatusMenuId] = useState(null);
+
+  const goToLogin = () => {
+    navigate('/login');
+  };
 
   const fetchTasks = async () => {
     try {
@@ -76,6 +84,9 @@ const Tasks = () => {
   return (
     <div className="tasks-container">
       <h2 className="tasks-title">Minhas Tarefas</h2>
+      <button className="back-to-login-button" onClick={goToLogin}>
+        Voltar para Login
+      </button>
 
       <div className="tasks-form">
         <input
@@ -95,6 +106,9 @@ const Tasks = () => {
           </span>
         ))}
       </div>
+      <p className="status-tip">
+        Clique no círculo colorido ao lado da tarefa para alterar seu status.
+      </p>
 
       <ul className="tasks-list">
         {tasks.length > 0 ? (
