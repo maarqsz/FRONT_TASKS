@@ -1,0 +1,155 @@
+.tasks-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tasks-title {
+  text-align: center;
+  color: #093889;
+  margin-bottom: 20px;
+}
+
+.tasks-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tasks-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.tasks-button {
+  padding: 10px 16px;
+  font-size: 15px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.tasks-button:hover {
+  background-color: #0056b3;
+}
+
+.tasks-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tasks-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* já deve ter essa classe, só mantenha */
+.delete-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ff4d4d;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.delete-button:hover {
+  color: #cc0000;
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* Cores baseadas no status */
+.status-indicator.pending {
+  background-color: #f1c40f; /* amarelo */
+}
+
+.status-indicator.in_progress {
+  background-color: #3498db; /* azul */
+}
+
+.status-indicator.completed {
+  background-color: #2ecc71; /* verde */
+}
+.tasks-legend {
+  display: flex;
+  justify-content: center;  /* Centraliza horizontalmente */
+  align-items: center;
+  gap: 20px;
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+.tasks-legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.status-menu {
+  position: absolute;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 5px 0;
+  margin-left: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  z-index: 10;
+  width: 120px;
+}
+
+.status-menu-item {
+  padding: 5px 12px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.status-menu-item:hover {
+  background-color: #eee;
+}
+
+/* Cores das opções - podem ser as mesmas do indicador */
+.status-menu-item.pending {
+  color: #d4a017; /* amarelo */
+}
+
+.status-menu-item.in_progress {
+  color: #2471a3; /* azul */
+}
+
+.status-menu-item.completed {
+  color: #27ae60; /* verde */
+}
+
+
+
+
+
+
