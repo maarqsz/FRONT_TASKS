@@ -1,7 +1,10 @@
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';  // Aqui estamos importando o contexto para garantir que o token seja lido
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const API_URL = import.meta.env.VITE_API_URL;
+
+console.log('API_URL:', import.meta.env.VITE_API_URL);
+
 
 const api = axios.create({
   baseURL: API_URL,
